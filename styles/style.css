@@ -1,6 +1,5 @@
-h1, h2, h3, div, img, p, section {
-  margin: 0;
-  padding: 0;
+* {
+  border: 1px solid red;
 }
 
 .page {
@@ -30,7 +29,6 @@ h1, h2, h3, div, img, p, section {
 /* ниже мы привели пример двух селекторов, чтобы вы вспомнили запись элемента */
 .logo {
   width: 183px;
-  background-size: cover;
 }
 
 .logo_place_header {
@@ -65,9 +63,7 @@ h1, h2, h3, div, img, p, section {
   line-height: 96px;
   font-size: 102px;
   font-weight: bold;
-  align-items: center;
-  margin-top: auto;
-  margin-bottom: auto;
+  align-self: center;
   margin-left: 64px;
   z-index: 1;
 }
@@ -109,6 +105,8 @@ h1, h2, h3, div, img, p, section {
   font-weight: normal;
   width: 175px;
   color: #2f80ed;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .two-columns__main-text {
@@ -166,6 +164,7 @@ h1, h2, h3, div, img, p, section {
   display: flex;
   justify-content: center;
   margin-top: 20px;
+  margin-bottom: 0;
 }
 
 .table {
@@ -175,8 +174,9 @@ h1, h2, h3, div, img, p, section {
   position: relative;
   flex-wrap: wrap;
   width: 1100px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
+  list-style-type: none;
+  padding: 0;
 }
 
 .table__heading {
@@ -207,11 +207,8 @@ h1, h2, h3, div, img, p, section {
 /* начало секции feynman */
 .feynman {
   height: 890px;
-  background-image: url(/images/feynman.png);
+  background: #f2f2f2 url(/images/feynman.png) no-repeat left bottom;
   background-size: 867px 637px;
-  background-repeat: no-repeat;
-  background-position: left bottom;
-  background-color: #f2f2f2;
   display: flex;
   position: relative;
   flex-direction: column;
@@ -235,6 +232,8 @@ h1, h2, h3, div, img, p, section {
   font-size: 36px;
   font-weight: normal;
   text-align: center;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .feynman__link {
@@ -286,6 +285,7 @@ h1, h2, h3, div, img, p, section {
   background-size: contain;
   right: -210px;
   top: 0;
+  bottom: 0;
   z-index: 0;
 }
 
@@ -325,11 +325,12 @@ h1, h2, h3, div, img, p, section {
   height: 35px;
 }
 
-.footer_column-heading {
+.footer__column-heading {
   line-height: 30px;
   font-size: 18px;
   font-weight: bold;
   margin-bottom: 20px;
+  margin-top: 0;
 }
 
 .footer__column-links {
