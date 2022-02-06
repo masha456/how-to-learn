@@ -7,10 +7,6 @@
   }
 }
 
-/* h1,h2, h3, img, div, p, section, ul, blockquote, a, li {
-  border: 1px solid red;
-}*/
-
 .page {
   min-width: 1100px;
   /* мы ещё не умеем делать мобильную версию сайта, */
@@ -22,13 +18,13 @@
   font-family: 'Helvetica Neue', Arial, sans-serif;
 }
 
-  /* описание шапки header*/
-
   /* анимация */
 
 .rotation-element {
   animation: rotation linear 20s infinite;
 }
+
+  /* описание шапки header*/
 
 .header {
   height: 100vh;
@@ -207,8 +203,8 @@
   margin: 0;
 }
 
-
 /* конец секции techniques */
+
 
 /* начало секции с видео*/
 
@@ -217,12 +213,22 @@
 }
 
 .video__iframes {
-  margin: 50px auto 0;
+  margin: 0 auto 0;
   display: flex;
   justify-content: center;
+  position: relative;
+  top: 50px;
 }
 
 .video__iframe {
+  margin-right: 20px;
+  width: 515px;
+  height: 316px;
+  border: 0;
+}
+
+.video__iframe:last-of-type {
+  margin: 0;
 }
 
 /* конец секции с видеo*/
@@ -232,11 +238,134 @@
   padding-top: 160px;
 }
 
+
+/* начало секции feynman */
+
+.feynman {
+  height: 890px;
+  background: #f2f2f2 url(/images/feynman.png) no-repeat left bottom;
+  background-size: 867px 637px;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  z-index: 0;
+  padding-top: 100px;
+}
+
+.feynman__title {
+  line-height: 1.15;
+  font-size: 120px;
+  font-weight: bold;
+  width: 648px;
+  text-align: center;
+  margin-bottom: 70px;
+  display: flex;
+  margin-top: 100px;
+}
+
+.feynman__subtitle {
+  line-height: 51px;
+  font-size: 36px;
+  font-weight: normal;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.feynman__link {
+  line-height: 51px;
+  font-size: 36px;
+  font-weight: normal;
+  color: #2f80ed;
+  text-decoration: none;
+  position: absolute;
+  right: 48px;
+  top: 50%;
+  opacity: 1;
+  transition: opacity .5s ease;
+}
+
+.feynman__link:hover {
+  opacity: 0.5;
+}
+
+/* конец секции feynman */
+
+/* начало секции digits таблица 1*/
+
+.digits {
+  display: flex;
+  flex-direction: column;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  align-items: center;
+}
+
+.section-title {
+  line-height: 1.15;
+  font-size: 60px;
+  font-weight: bold;
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.section-subtitle {
+  line-height: 34px;
+  font-size: 24px;
+  font-weight: normal;
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  margin: 20px auto 0;
+}
+
+.table {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: relative;
+  flex-wrap: wrap;
+  width: 1100px;
+  margin: 0 auto;
+  list-style-type: none;
+  padding: 0;
+}
+
+.table__heading {
+  line-height: 1.15;
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.table__text {
+  line-height: 1.2;
+  font-size: 18px;
+  font-weight: normal;
+  margin: 20px 0 0;
+}
+
+.table__cell {
+  width: 250px;
+  margin-top: 60px;
+}
+
+.table__text:last-of-type {
+  margin-bottom: 0;
+}
+
+/* конец секции digits */
+
+
 /* секция khan*/
 
 .khan {
-  margin-top: 105px;
+  padding-top: 105px;
   display: flex;
+  background-color: #f2f2f2;
 }
 
 .khan__container {
@@ -308,125 +437,8 @@
 .khan__buy-link:hover {
   opacity: 0.5;
 }
-/* клнец секции */
 
-/* начало секции digits таблица 1*/
-.digits {
-  display: flex;
-  flex-direction: column;
-  padding-top: 100px;
-  padding-bottom: 100px;
-  align-items: center;
-}
-
-.section-title {
-  line-height: 1.15;
-  font-size: 60px;
-  font-weight: bold;
-  width: 60%;
-  display: flex;
-  justify-content: center;
-  margin: 0 auto;
-}
-
-.section-subtitle {
-  line-height: 34px;
-  font-size: 24px;
-  font-weight: normal;
-  width: 60%;
-  display: flex;
-  justify-content: center;
-  margin: 20px auto 0;
-}
-
-.table {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  position: relative;
-  flex-wrap: wrap;
-  width: 1100px;
-  margin: 0 auto;
-  list-style-type: none;
-  padding: 0;
-}
-
-.table__heading {
-  line-height: 1.15;
-  font-size: 24px;
-  font-weight: bold;
-  margin: 0;
-}
-
-.table__text {
-  line-height: 1.2;
-  font-size: 18px;
-  font-weight: normal;
-  margin: 20px 0 0;
-}
-
-.table__cell {
-  width: 250px;
-  margin-top: 60px;
-}
-
-.table__text:last-of-type {
-  margin-bottom: 0;
-}
-
-/* конец секции digits */
-
-/* начало секции feynman */
-.feynman {
-  height: 890px;
-  background: #f2f2f2 url(/images/feynman.png) no-repeat left bottom;
-  background-size: 867px 637px;
-  display: flex;
-  position: relative;
-  flex-direction: column;
-  align-items: center;
-  z-index: 0;
-  margin-top: 100px;
-}
-
-.feynman__title {
-  line-height: 1.15;
-  font-size: 120px;
-  font-weight: bold;
-  width: 648px;
-  text-align: center;
-  margin-bottom: 70px;
-  display: flex;
-  margin-top: 100px;
-}
-
-.feynman__subtitle {
-  line-height: 51px;
-  font-size: 36px;
-  font-weight: normal;
-  text-align: center;
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
-.feynman__link {
-  line-height: 51px;
-  font-size: 36px;
-  font-weight: normal;
-  color: #2f80ed;
-  text-decoration: none;
-  position: absolute;
-  right: 48px;
-  top: 50%;
-  opacity: 1;
-  transition: opacity .5s ease;
-}
-
-.feynman__link:hover {
-  opacity: 0.5;
-}
-
-/* конец секции feynman */
+/* кoнец секции khan*/
 
 /* начало секции kaufman таблица 2 */
 .kaufman {
@@ -467,6 +479,8 @@
   bottom: 0;
   z-index: -1;
 }
+
+/* конец секции kaufman*/
 
 /* начало resource*/
 .resources {
