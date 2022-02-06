@@ -7,6 +7,10 @@
   }
 }
 
+/* h1,h2, h3, img, div, p, section, ul, blockquote, a, li {
+  border: 1px solid red;
+}*/
+
 .page {
   min-width: 1100px;
   /* мы ещё не умеем делать мобильную версию сайта, */
@@ -95,23 +99,15 @@
 .header__link {
   color: #2f80ed;
   text-decoration: none;
-}
-
-/* конец шапки header*/
-
-
-/* прозрачные ссылки */
-
-.opacity-link {
   opacity: 1;
   transition: opacity .5s ease;
 }
 
-.opacity-link:hover {
+.header__link:hover {
   opacity: .5;
 }
 
-
+/* конец шапки header*/
 
 
 /* начало секции description */
@@ -165,6 +161,155 @@
 
 /* конец секции description */
 
+
+/* начало секции techniques */
+.techniques {
+  width: 80%;
+  margin: 100px auto 0;
+}
+
+.cards {
+  width: 920px;
+  margin: 0 auto;
+  padding: 0;
+  display: grid;
+  text-align: center;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 100px;
+}
+
+.cards__item {
+  list-style-type: none;
+  margin-top: 60px;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.cards__image {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  margin: 0 40px;
+}
+
+.cards__title {
+  line-height: 1.15;
+  font-size: 24px;
+  font-weight: bold;
+  margin: 43px 0 16px;
+}
+
+.cards__description {
+  line-height: 23px;
+  font-size: 18px;
+  font-weight: normal;
+  margin: 0;
+}
+
+
+/* конец секции techniques */
+
+/* начало секции с видео*/
+
+.video {
+  margin: 100px auto 0;
+}
+
+.video__iframes {
+  margin: 50px auto 0;
+  display: flex;
+  justify-content: center;
+}
+
+.video__iframe {
+}
+
+/* конец секции с видеo*/
+
+.oakley {
+  background-color: #f2f2f2;
+  padding-top: 160px;
+}
+
+/* секция khan*/
+
+.khan {
+  margin-top: 105px;
+  display: flex;
+}
+
+.khan__container {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+
+.khan__author {
+  line-height: 42px;
+  font-size: 30px;
+  font-weight: normal;
+  margin: 0;
+}
+
+.khan__title {
+  line-height: 1.15;
+  font-size: 60px;
+  font-weight: bold;
+  margin: 0 0 50px;
+}
+
+.khan__quote {
+  line-height: 34px;
+  font-size: 24px;
+  font-weight: normal;
+  width: 790px;
+  margin: 0 0 36px;
+}
+
+.khan__quote-author {
+  line-height: 1.15;
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0 0 10px;
+}
+
+.khan__quote-author-subline {
+  line-height: 1.15;
+  font-size: 24px;
+  font-weight: normal;
+  margin: 0 0 68px;
+}
+
+.khan__book-container {
+  display: flex;
+}
+
+.khan__book-pic {
+  width: 606px;
+  height: 620px;
+  margin-right: 48px;
+  object-fit: cover;
+  object-position: top;
+}
+
+.khan__buy-link {
+  line-height: 42px;
+  font-size: 30px;
+  font-weight: normal;
+  color: #2f80ed;
+  text-decoration: none;
+  align-self: flex-start;
+  opacity: 1;
+  transition: opacity .5s ease;
+}
+
+.khan__buy-link:hover {
+  opacity: 0.5;
+}
+/* клнец секции */
+
 /* начало секции digits таблица 1*/
 .digits {
   display: flex;
@@ -191,8 +336,7 @@
   width: 60%;
   display: flex;
   justify-content: center;
-  margin-top: 20px;
-  margin-bottom: 0;
+  margin: 20px auto 0;
 }
 
 .table {
@@ -242,6 +386,7 @@
   flex-direction: column;
   align-items: center;
   z-index: 0;
+  margin-top: 100px;
 }
 
 .feynman__title {
@@ -273,6 +418,12 @@
   position: absolute;
   right: 48px;
   top: 50%;
+  opacity: 1;
+  transition: opacity .5s ease;
+}
+
+.feynman__link:hover {
+  opacity: 0.5;
 }
 
 /* конец секции feynman */
@@ -317,6 +468,27 @@
   z-index: -1;
 }
 
+/* начало resource*/
+.resources {
+  padding-top: 100px;
+  padding-bottom: 217px;
+}
+
+.resources__logo-zone {
+  list-style-type: none;
+  width: 1100px;
+  display: flex;
+  margin: 80px auto 0;
+  padding: 0;
+  justify-content: center;
+}
+
+.resources__logo {
+  width: 270px;
+  height: 38px;
+}
+
+/* конец resource*/
 
 /* начало подвала footer*/
 
@@ -349,7 +521,7 @@
   flex-basis: 711px;
 }
 
-.logo_place_footer {
+ .logo_place_footer {
   height: 35px;
 }
 
@@ -375,8 +547,13 @@
   font-weight: normal;
   text-decoration: none;
   color: #f2f2f2;
+  opacity: 1;
+  transition: opacity .5s ease;
 }
 
+.footer__column-link:hover {
+  opacity: 0.5;
+}
 .footer__column-link:last-of-type {
   margin-bottom: 16px;
 }
